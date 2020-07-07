@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob">
+    <button type="submit" onclick="check_age()">Check Age</button><br><br>
+
+    <script>
+        function check_age(){
+            var now=new Date();
+            var now_dob=now.getFullYear();
+            var x = document.getElementById("dob").value;
+            var date=new Date(x);
+            var dob=date.getFullYear();
+            var age = now_dob - dob;
+            if(age < 18){
+                alert("Your age is under 18!");
+            }else{
+                alert("Your age is over 18!");
+            }
+        }
+
+    </script>
+</body>
+</html>

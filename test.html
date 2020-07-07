@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction() {
+            var fn=document.getElementById("from").value;
+            var tn=document.getElementById("to").value;
+            var num =parseInt(prompt("Please enter between "+fn +" and "+ tn));
+            document.getElementById("show").innerHTML = num;
+            if(num%2 != 0){
+                document.getElementById("div2").innerHTML=num+" is not divided by 2.";
+            }else{
+                document.getElementById("div2").innerHTML=num;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+        <table>
+            <tr>
+                <td>From</td>
+                <td><input type="text" id="from"></td>
+            </tr>
+            <tr>
+                <td>To</td>
+                <td><input type="text" id="to"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button type="submit" onclick="myFunction()">Calculate</button></td>
+            </tr>
+        </table>
+        <p id="show"></p>
+        <p id="div2" style="color:aqua;"></p>
+    
+</body>
+</html>

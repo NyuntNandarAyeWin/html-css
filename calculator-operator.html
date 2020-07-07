@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function functionAdd(){
+            var firstNum=parseInt(document.getElementById("from").value);
+            var secNum=parseInt(document.getElementById("to").value);
+            var result = firstNum + secNum;
+            document.getElementById("ans-add").innerHTML="Add "+firstNum+" and "+secNum+" = "+result;
+        }
+        function functionSub(){
+            var firstNum=parseInt(document.getElementById("from").value);
+            var secNum=parseInt(document.getElementById("to").value);
+            var result = firstNum - secNum;
+            document.getElementById("ans-sub").innerHTML="Sub "+firstNum+" and "+secNum+" = "+result;
+        }
+        function functionMul(){
+            var firstNum=parseInt(document.getElementById("from").value);
+            var secNum=parseInt(document.getElementById("to").value);
+            var result = firstNum * secNum;
+            document.getElementById("ans-mul").innerHTML="Multiply "+firstNum+" and "+secNum+" = "+result;
+        }
+        function functionDiv(){
+            var firstNum=parseInt(document.getElementById("from").value);
+            var secNum=parseInt(document.getElementById("to").value);
+            var result = firstNum / secNum;
+            document.getElementById("ans-div").innerHTML="Divide "+firstNum+" and "+secNum+" = "+result;
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>From :</td>
+            <td><input type="text" id="from" value="First number"></td>
+        </tr>
+        <tr>
+            <td>To :</td>
+            <td><input type="text" id="to" value="Second number"></td>
+        </tr>
+    </table>
+    <button type="submit" onclick="functionAdd()">+</button>
+    <button type="submit" onclick="functionSub()">-</button>
+    <button type="submit" onclick="functionMul()">*</button>
+    <button type="submit" onclick="functionDiv()">/</button>
+    <p id="ans-add"></p>
+    <p id="ans-sub"></p>
+    <p id="ans-mul"></p>
+    <p id="ans-div"></p>
+</body>
+</html>

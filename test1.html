@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunction() {
+            var fn=parseInt(document.getElementById("from").value);
+            var tn=parseInt(document.getElementById("to").value);
+            var i;
+            for(i=fn; i<=tn; i++){
+                if(i%2 != 0){
+                    document.getElementById("odd").innerHTML +=i+" ";
+                }else{
+                    document.getElementById("even").innerHTML +=i+" ";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+        <table>
+            <tr>
+                <td>From</td>
+                <td><input type="text" id="from"></td>
+            </tr>
+            <tr>
+                <td>To</td>
+                <td><input type="text" id="to"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button type="submit" onclick="myFunction()">Show</button></td>
+            </tr>
+        </table>
+        Odd &nbsp;&nbsp;&nbsp;:<p id="odd" style="color: chartreuse;"></p>
+        Even &nbsp;&nbsp;&nbsp;:<p id="even" style="color:darkorange;"></p>
+    
+</body>
+</html>
