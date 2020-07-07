@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>From</td>
+            <td><input type="text" id="from"></td>
+        </tr>
+        <tr>
+            <td>To</td>
+            <td><input type="text" id="to"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><button type="submit" onclick="myFunction()">Show</button></td>
+        </tr>
+    </table>
+    <p id="show" style="color: blue;">Divided by 2 & 5 &nbsp;&nbsp;:&nbsp;</p>
+    <p id="false"></p>
+
+    <script>
+        function myFunction() {
+            var fn=parseInt(document.getElementById("from").value);
+            var tn=parseInt(document.getElementById("to").value);
+            var i;
+            for(i=fn; i<=tn; i++){
+                if(i%2==0 && i%5 == 0){
+                    document.getElementById("show").innerHTML +=i+" ";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
